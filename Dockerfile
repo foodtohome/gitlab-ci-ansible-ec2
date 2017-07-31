@@ -5,7 +5,7 @@ RUN apk update \
     && pip install boto3 \
     && rm /var/cache/apk/*
 
-ADD https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/ec2.py \
+ADD https://raw.githubusercontent.com/ansible/ansible/stable-2.3/contrib/inventory/ec2.py \
     /usr/bin/ansible-ec2.py
 
 RUN chmod +x /usr/bin/ansible-ec2.py
